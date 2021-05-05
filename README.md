@@ -1,6 +1,6 @@
-### Kleros
+# Kleros - Justice on Blockchain
 
-## Simplified, script imitation of: [escrow.kleros.io](https://escrow.kleros.io/)
+## Script imitation of: [escrow.kleros.io](https://escrow.kleros.io/)
 
 ### 🔧 Preconfiguration
 
@@ -21,4 +21,4 @@
    </br>`truffle exec scripts/kleros.js`
    </br>and follow screen instructions...
 
-## Kleros overview [Evernote](https://www.evernote.com/shard/s584/client/snv?noteGuid=a6af399a-9a10-cfcf-6d01-37c83802b190&noteKey=448ce87e4f9bc5f059f854bc589f9ba8&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs584%2Fsh%2Fa6af399a-9a10-cfcf-6d01-37c83802b190%2F448ce87e4f9bc5f059f854bc589f9ba8&title=Kl3r0s)
+### 📝 Protocol overview [Evernote](https://www.evernote.com/shard/s584/client/snv?noteGuid=a6af399a-9a10-cfcf-6d01-37c83802b190&noteKey=448ce87e4f9bc5f059f854bc589f9ba8&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs584%2Fsh%2Fa6af399a-9a10-cfcf-6d01-37c83802b190%2F448ce87e4f9bc5f059f854bc589f9ba8&title=Kl3r0s)
