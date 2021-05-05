@@ -1,8 +1,8 @@
-# Kleros - Justice on Blockchain
+# ⚖️ [Kleros](https://kleros.io) - Justice by Blockchain.
 
-## Script imitation of: [escrow.kleros.io](https://escrow.kleros.io/)
+### 📜 Script imitation of: [escrow.kleros.io](https://escrow.kleros.io/)
 
-### 🔧 Preconfiguration
+### 🔧 Instructions:
 
 0. **Enter project directory and install dependencies(works with node v14.15.5)**
    </br>`cd kleros && npm i`
