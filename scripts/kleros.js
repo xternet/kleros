@@ -13,7 +13,7 @@ module.exports = async function(callback) {
     const [sender, receiver] = await web3.eth.getAccounts()
 
     console.log('Sender: Uploading deal terms on IPFS...')
-    let upload = await ipfs.add(globSource(`${__dirname}/evidences/deal_terms.txt`))
+    let upload = await ipfs.add(globSource(`${__dirname}/data/deal_terms.txt`))
     const termsExtractedHash = upload.cid.toString()
     const termsEvidenceLink = 'https://ipfs.io/ipfs/' + termsExtractedHash
 
@@ -40,7 +40,7 @@ module.exports = async function(callback) {
     })
 
     console.log('Sender: Uploading evidence to IPFS...')
-    upload = await ipfs.add(globSource(`${__dirname}/evidences/sender_evidence.txt`))
+    upload = await ipfs.add(globSource(`${__dirname}/data/sender_evidence.txt`))
     const senderEvidenceHash = upload.cid.toString()
     const senderEvidenceLink = 'https://ipfs.io/ipfs/' + senderEvidenceHash
 
@@ -66,7 +66,7 @@ module.exports = async function(callback) {
     const disputeId = result.events.Dispute.returnValues[1]
 
     console.log('Receiver: Uploading evidence to IPFS by receiver...')
-    upload = await ipfs.add(globSource(`${__dirname}/evidences/receiver_evidence.txt`))
+    upload = await ipfs.add(globSource(`${__dirname}/data/receiver_evidence.txt`))
     const receiverEvidenceHash = upload.cid.toString()
     const receiverEvidenceLink = 'https://ipfs.io/ipfs/' + receiverEvidenceHash
 
