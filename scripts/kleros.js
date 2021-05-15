@@ -14,8 +14,8 @@ module.exports = async function(callback) {
 
     console.log('Sender: Uploading deal terms on IPFS...')
     let upload = await ipfs.add(globSource(`${__dirname}/data/deal_terms.txt`))
-    const termsExtractedHash = upload.cid.toString()
-    const termsEvidenceLink = 'https://ipfs.io/ipfs/' + termsExtractedHash
+    const termsHash = upload.cid.toString()
+    const termsEvidenceLink = 'https://ipfs.io/ipfs/' + termsHash
 
     console.log('Sender: Securing the deal...')
     let result = await contract.methods.createTransaction(
@@ -36,7 +36,7 @@ module.exports = async function(callback) {
     ).send({
       from: sender,
       gasLimit: '5000000',
-      value: web3.utils.toWei('.1') //arbitration fee, goes back to winner
+      value: web3.utils.toWei('.1') //arbitration fee, goes back to the winner
     })
 
     console.log('Sender: Uploading evidence to IPFS...')
@@ -59,7 +59,7 @@ module.exports = async function(callback) {
     ).send({
       from: receiver,
       gasLimit: '5000000',
-      value: web3.utils.toWei('.1') //arbitration fee, goes back to winner
+      value: web3.utils.toWei('.1') //arbitration fee, goes back to the winner
     })
 
     const disputeContract = result.events.Dispute.returnValues[0]
